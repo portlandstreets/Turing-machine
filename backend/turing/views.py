@@ -14,7 +14,7 @@ def parse_rules(raw_code):
     return transitions
 
 @api_view(['POST'])
-
+def step_machine(request):
     data = request.data
     tape_dict = data.get('tape', {}) 
     head = int(data.get('head', 0))

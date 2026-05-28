@@ -1,6 +1,6 @@
 <template>
   <div class="emulator-container">
-    <h2>Машина Тьюрінга (Бекенд Логіка)</h2>
+    <h2>Машина Тьюрінга</h2>
     
     <div class="tape-view">
       <div v-for="offset in tapeWindow" :key="offset" class="tape-cell" :class="{ 'head-cell': offset === 0 }">
@@ -11,9 +11,9 @@
 
     <div class="controls">
       <button @click="applyCode">Скинути / Завантажити</button>
-      <button @click="doStep" :disabled="isHalted || isRequesting">Крок (Сервер)</button>
+      <button @click="doStep" :disabled="isHalted || isRequesting">Крок</button>
       <button @click="togglePlay" :disabled="isHalted">
-        {{ isRunning ? 'Пауза' : 'Авто (Сервер)' }}
+        {{ isRunning ? 'Пауза' : 'Авто' }}
       </button>
       <span class="status">Стан: {{ currentState }} | Кроки: {{ steps }}</span>
     </div>
